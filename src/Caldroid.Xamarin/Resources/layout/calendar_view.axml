@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="?styleCaldroidViewLayout"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/calendar_title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        style="?styleCaldroidHeader">
+
+        <Button
+            android:id="@+id/calendar_left_arrow"
+            style="?styleCaldroidLeftArrow" />
+
+        <TextView
+            android:id="@+id/calendar_month_year_textview"
+            style="?styleCaldroidMonthName"/>
+
+        <Button
+            android:id="@+id/calendar_right_arrow"
+            style="?styleCaldroidRightArrow" />
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/weekday_gridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="7"
+        android:stretchMode="columnWidth" >
+    </GridView>
+
+    <Caldroid.Xamarin.Com.Antonyt.InfiniteViewPager.InfiniteViewPager
+        android:id="@+id/months_infinite_pager"
+        android:numColumns="7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

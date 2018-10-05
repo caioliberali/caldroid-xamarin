@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.xamarin.CaldroidSamples">
+	<uses-sdk android:minSdkVersion="19" />
+	<application android:label="CaldroidSamples" android:theme="@style/AppTheme" android:icon="@mipmap/icon"></application>
+</manifest>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A07767C6-A6F9-4363-9C6A-6E4046B7D966}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Caldroid.Xamarin</RootNamespace>
+    <AssemblyName>Caldroid.Xamarin</AssemblyName>
+    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <JavaMaximumHeapSize></JavaMaximumHeapSize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidManagedSymbols>true</AndroidManagedSymbols>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <JavaMaximumHeapSize></JavaMaximumHeapSize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="Xamarin.Android.Support.Annotations">
+      <HintPath>..\..\packages\Xamarin.Android.Support.Annotations.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Arch.Core.Common">
+      <HintPath>..\..\packages\Xamarin.Android.Arch.Core.Common.1.0.0.1\lib\MonoAndroid80\Xamarin.Android.Arch.Core.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Arch.Lifecycle.Common">
+      <HintPath>..\..\packages\Xamarin.Android.Arch.Lifecycle.Common.1.0.3.1\lib\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Arch.Lifecycle.Runtime">
+      <HintPath>..\..\packages\Xamarin.Android.Arch.Lifecycle.Runtime.1.0.3.1\lib\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Compat">
+      <HintPath>..\..\packages\Xamarin.Android.Support.Compat.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.Compat.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Core.UI">
+      <HintPath>..\..\packages\Xamarin.Android.Support.Core.UI.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.Core.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Core.Utils">
+      <HintPath>..\..\packages\Xamarin.Android.Support.Core.Utils.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.Core.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Fragment">
+      <HintPath>..\..\packages\Xamarin.Android.Support.Fragment.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.Fragment.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Media.Compat">
+      <HintPath>..\..\packages\Xamarin.Android.Support.Media.Compat.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.Media.Compat.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>..\..\packages\Xamarin.Android.Support.v4.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Com\Antonyt\InfiniteViewPager\InfinitePagerAdapter.cs" />
+    <Compile Include="Com\Antonyt\InfiniteViewPager\InfiniteViewPager.cs" />
+    <Compile Include="Com\Roomorama\Caldroid\CaldroidFragment.cs" />
+    <Compile Include="Com\Roomorama\Caldroid\CaldroidGridAdapter.cs" />
+    <Compile Include="Com\Roomorama\Caldroid\CalendarHelper.cs" />
+    <Compile Include="Com\Roomorama\Caldroid\CellView.cs" />
+    <Compile Include="Com\Roomorama\Caldroid\DateGridFragment.cs" />
+    <Compile Include="Com\Roomorama\Caldroid\ICaldroidListener.cs" />
+    <Compile Include="Com\Roomorama\Caldroid\MonthPagerAdapter.cs" />
+    <Compile Include="Com\Roomorama\Caldroid\SquareTextView.cs" />
+    <Compile Include="Com\Roomorama\Caldroid\WeekdayArrayAdapter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\Strings.xml" />
+    <AndroidResource Include="Resources\color\cell_text_color.xml" />
+    <AndroidResource Include="Resources\color\cell_text_color_dark.xml" />
+    <AndroidResource Include="Resources\drawable\cell_bg.xml" />
+    <AndroidResource Include="Resources\drawable\cell_bg_dark.xml" />
+    <AndroidResource Include="Resources\drawable\disable_cell.xml" />
+    <AndroidResource Include="Resources\drawable\disabled_cell_dark.xml" />
+    <AndroidResource Include="Resources\drawable\left_arrow.xml" />
+    <AndroidResource Include="Resources\drawable\red_border.xml" />
+    <AndroidResource Include="Resources\drawable\red_border_dark.xml" />
+    <AndroidResource Include="Resources\drawable\red_border_gray_bg.xml" />
+    <AndroidResource Include="Resources\drawable\right_arrow.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\calendar_next_arrow.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\calendar_prev_arrow.png" />
+    <AndroidResource Include="Resources\layout\calendar_view.axml" />
+    <AndroidResource Include="Resources\layout\date_grid_fragment.axml" />
+    <AndroidResource Include="Resources\layout\normal_date_cell.axml" />
+    <AndroidResource Include="Resources\layout\square_date_cell.axml" />
+    <AndroidResource Include="Resources\layout\weekday_textview.axml" />
+    <AndroidResource Include="Resources\values\attrs.xml" />
+    <AndroidResource Include="Resources\values\color.xml" />
+    <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\values-v11\styles.xml" />
+    <AndroidResource Include="Resources\values-v14\styles.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <Import Project="..\..\packages\Xamarin.Android.Support.Annotations.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Annotations.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Annotations.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Annotations.targets')" />
+  <Import Project="..\..\packages\Xamarin.Android.Arch.Core.Common.1.0.0.1\build\MonoAndroid80\Xamarin.Android.Arch.Core.Common.targets" Condition="Exists('..\..\packages\Xamarin.Android.Arch.Core.Common.1.0.0.1\build\MonoAndroid80\Xamarin.Android.Arch.Core.Common.targets')" />
+  <Import Project="..\..\packages\Xamarin.Android.Arch.Lifecycle.Common.1.0.3.1\build\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Common.targets" Condition="Exists('..\..\packages\Xamarin.Android.Arch.Lifecycle.Common.1.0.3.1\build\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Common.targets')" />
+  <Import Project="..\..\packages\Xamarin.Android.Arch.Lifecycle.Runtime.1.0.3.1\build\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Runtime.targets" Condition="Exists('..\..\packages\Xamarin.Android.Arch.Lifecycle.Runtime.1.0.3.1\build\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Runtime.targets')" />
+  <Import Project="..\..\packages\Xamarin.Android.Support.Compat.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Compat.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Compat.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Compat.targets')" />
+  <Import Project="..\..\packages\Xamarin.Android.Support.Core.UI.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Core.UI.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Core.UI.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Core.UI.targets')" />
+  <Import Project="..\..\packages\Xamarin.Android.Support.Core.Utils.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Core.Utils.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Core.Utils.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Core.Utils.targets')" />
+  <Import Project="..\..\packages\Xamarin.Android.Support.Fragment.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Fragment.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Fragment.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Fragment.targets')" />
+  <Import Project="..\..\packages\Xamarin.Android.Support.Media.Compat.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Media.Compat.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Media.Compat.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Media.Compat.targets')" />
+  <Import Project="..\..\packages\Xamarin.Android.Support.v4.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.v4.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.v4.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.v4.targets')" />
+</Project>
