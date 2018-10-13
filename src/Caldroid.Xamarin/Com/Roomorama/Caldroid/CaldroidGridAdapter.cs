@@ -101,7 +101,7 @@ namespace Caldroid.Xamarin.Com.Roomorama.Caldroid
             {
                 if (HasCalendarDataChanged(_dataFromCalendar, value))
                 {
-                    _dataFromCalendar = value;
+                    _dataFromCalendar = new Dictionary<string, object>(value);
                     UpdateFromCalendarData();
                 }
             }
@@ -110,7 +110,7 @@ namespace Caldroid.Xamarin.Com.Roomorama.Caldroid
         public Dictionary<string, object> DataFromClient
         {
             get { return _dataFromClient; }
-            set { _dataFromClient = value; }
+            set { _dataFromClient = new Dictionary<string, object>(value); }
         }
 
 
@@ -121,8 +121,8 @@ namespace Caldroid.Xamarin.Com.Roomorama.Caldroid
             _year = year;
             _month = month;
             _context = context;
-            _dataFromClient = dataFromClient;
-            _dataFromCalendar = dataFromCalendar;
+            _dataFromClient = new Dictionary<string, object>(dataFromClient);
+            _dataFromCalendar = new Dictionary<string, object>(dataFromCalendar);
 
             LoadFromCalendarData();
 
@@ -256,9 +256,6 @@ namespace Caldroid.Xamarin.Com.Roomorama.Caldroid
 
         public void SetAdapterDateTime(DateTime dateTime)
         {
-            if (_year == dateTime.Year && _month == dateTime.Month)
-                return;
-
             _year = dateTime.Year;
             _month = dateTime.Month;
 

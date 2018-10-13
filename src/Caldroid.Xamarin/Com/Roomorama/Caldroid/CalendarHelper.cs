@@ -5,6 +5,7 @@ using Java.Text;
 using Java.Util;
 
 namespace Caldroid.Xamarin.Com.Roomorama.Caldroid
+
 {
     /// <summary>
     /// Convenient helper to work with date, Date4J DateTime and String
@@ -142,9 +143,11 @@ namespace Caldroid.Xamarin.Com.Roomorama.Caldroid
 
         public static DateTime LastDateTimeOfPreviousMonth(DateTime dateTime)
         {
+            dateTime = dateTime.AddMonths(-1);
+
             var day = DateTime.DaysInMonth(dateTime.Year, dateTime.Month);
 
-            return new DateTime(dateTime.Year, dateTime.Month, day).AddMonths(-1);
+            return new DateTime(dateTime.Year, dateTime.Month, day);
         }
 
 
@@ -156,9 +159,11 @@ namespace Caldroid.Xamarin.Com.Roomorama.Caldroid
 
         public static DateTime LastDateTimeOfNextMonth(DateTime dateTime)
         {
+            dateTime = dateTime.AddMonths(1);
+
             var day = DateTime.DaysInMonth(dateTime.Year, dateTime.Month);
 
-            return new DateTime(dateTime.Year, dateTime.Month, day).AddMonths(1);
+            return new DateTime(dateTime.Year, dateTime.Month, day);
         }
 
 
